@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Day 1 Interview Q&A</title>
+  <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+
+  <h1>CSS Day 1 - Interview Questions & Answers</h1>
+
+  <div class="question">
+    <h2>1. Difference Between Flex <code>row</code> and <code>column</code></h2>
+    <table>
+      <tr><th>Property</th><th>row</th><th>column</th></tr>
+      <tr><td>Main Axis</td><td>Horizontal (left to right)</td><td>Vertical (top to bottom)</td></tr>
+      <tr><td>Cross Axis</td><td>Vertical</td><td>Hori
+        zontal</td></tr>
+      <tr><td>Default</td><td>Yes</td><td>No, needs to be set</td></tr>
+    </table>
+    <div class="code-block">
+      .container {<br>
+      &nbsp;&nbsp;display: flex;<br>
+      &nbsp;&nbsp;flex-direction: row; /* or column */<br>
+      }
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>2. Inline, Internal, and External Stylesheet</h2>
+    <table>
+      <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+      <tr>
+        <td>Inline</td>
+        <td>Written directly in the element</td>
+        <td>&lt;h1 style="color:red;"&gt;Hello&lt;/h1&gt;</td>
+      </tr>
+      <tr>
+        <td>Internal</td>
+        <td>Inside &lt;style&gt; tag in HTML head</td>
+        <td>&lt;style&gt; h1 { color: red; } &lt;/style&gt;</td>
+      </tr>
+      <tr>
+        <td>External</td>
+        <td>In separate CSS file</td>
+        <td>&lt;link rel="stylesheet" href="style.css"&gt;</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="question">
+    <h2>3. What does <code>justify-content</code> do?</h2>
+    <p>Aligns items along the <strong>main axis</strong> in Flexbox.</p>
+    <p><strong>Values:</strong> flex-start, center, flex-end, space-between, space-around, space-evenly</p>
+    <div class="code-block">
+      .container {<br>
+      &nbsp;&nbsp;display: flex;<br>
+      &nbsp;&nbsp;justify-content: center;<br>
+      }
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>4. Difference Between <code>absolute</code> and <code>relative</code> Positioning</h2>
+    <table>
+      <tr><th>Property</th><th>relative</th><th>absolute</th></tr>
+      <tr><td>Positioning</td><td>Relative to its original position</td><td>Relative to nearest positioned ancestor</td></tr>
+      <tr><td>Keeps space?</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Use Case</td><td>Minor shift</td><td>Overlay, pop-up</td></tr>
+    </table>
+  </div>
+
+  <div class="question">
+    <h2>5. What is <code>z-index</code> in CSS?</h2>
+    <p>Controls the stacking order of positioned elements.</p>
+    <p>Higher <code>z-index</code> brings element to the front. Only works with <code>position: relative</code>, <code>absolute</code>, or <code>fixed</code>.</p>
+    <div class="code-block">
+      .box {<br>
+      &nbsp;&nbsp;position: absolute;<br>
+      &nbsp;&nbsp;z-index: 10;<br>
+      }
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>6. Difference Between <code>padding</code> and <code>margin</code></h2>
+    <table>
+      <tr><th>Property</th><th>Padding</th><th>Margin</th></tr>
+      <tr>
+        <td>Space applies to</td>
+        <td>Inside element (between content & border)</td>
+        <td>Outside element (between border & other elements)</td>
+      </tr>
+      <tr>
+        <td>Affects background?</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Used for</td>
+        <td>Inner spacing</td>
+        <td>Outer spacing</td>
+      </tr>
+    </table>
+    <p><strong>Box Model:</strong> [ Margin ] → [ Border ] → [ Padding ] → [ Content ]</p>
+  </div>
+
+</body>
+</html>
